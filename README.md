@@ -3,5 +3,6 @@
 
 
 ## Install utility via curl
-    sudo curl https://raw.githubusercontent.com/MuzammilM/crontabUncomment/master/crontabUncomment.sh -o /usr/local/sbin/crontabUncomment && sudo chmod +x /usr/local/sbin/crontabUncomment
+    
+    mkdir -p ~/bin/shellscript && sudo curl -s https://raw.githubusercontent.com/MuzammilM/crontabUncomment/master/crontabUncomment.sh -o ~/bin/shellscript/crontabUncomment.sh && sudo ln -s /home/$USER/bin/shellscript/crontabUncomment.sh /usr/bin/crontabUncomment && sudo chmod +x /usr/bin/crontabUncomment
 
