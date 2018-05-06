@@ -14,7 +14,7 @@ fi
 arg=$1
 if [[ "$arg" == id* ]]
    then
-        echo "Commenting "$arg
+        echo "Uncommenting "$arg
         crontab -l > crontab
         line=`cat crontab | grep -n $1 | cut -d : -f 1`
         line2=$((line+1))
@@ -24,6 +24,7 @@ if [[ "$arg" == id* ]]
         rm crontab
         crontab -l
    else
+        echo "Uncommenting "$1
         crontab -l > crontab && sed -i '/'$1'/s/#//' crontab && crontab crontab && rm crontab
         crontab -l
 fi
