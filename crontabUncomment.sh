@@ -10,10 +10,6 @@ then
         echo -e "${COLOR}Execution : crontabUncomment {scriptName.sh}${reset}"
         exit
 fi
-crontab -l > cronoutput.txt && sed  '/'$1'/s/#//' cronoutput.txt > _c  &&  mv -f _c cronoutput.txt && crontab cronoutput.txt && rm cronoutput.txt
-crontab -l
-
-
 arg=$1
 if [[ "$arg" == id* ]]
    then
