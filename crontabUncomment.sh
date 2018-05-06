@@ -10,6 +10,7 @@ then
         echo -e "${COLOR}Execution : crontabUncomment {scriptName.sh}${reset}"
         exit
 fi
+
 arg=$1
 if [[ "$arg" == id* ]]
    then
